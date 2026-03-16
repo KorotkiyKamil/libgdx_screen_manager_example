@@ -14,13 +14,15 @@ import com.badlogic.gdx.scenes.scene2d.ui.Skin;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
-public class ScreenOne implements Screen {
+public class ScreenOne extends BaseScreen {
 
     Stage stage;
     Skin skin;
     TextureAtlas buttonAtlas;
     Button backButton;
-    public ScreenOne(final ScreenManagerTest game) {
+    public ScreenOne(Game game) {
+
+        super(game);
 
         stage = new Stage(new StretchViewport(800,480));
         buttonAtlas = new TextureAtlas(Gdx.files.internal("button.atlas"));
