@@ -13,7 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.ui.TextButton;
 import com.badlogic.gdx.scenes.scene2d.utils.ClickListener;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
-public class MainScreen implements Screen {
+public class MainScreen extends BaseScreen {
     Stage stage;
     Skin skin;
     TextureAtlas buttonAtlas;
@@ -21,7 +21,9 @@ public class MainScreen implements Screen {
     TextButton.TextButtonStyle style;
     TextButton ScreenOneButton, ScreenTwoButton, ScreenThreeButton;
 
-    public MainScreen(final ScreenManagerTest game) {
+    public MainScreen(Game game) {
+
+        super(game);
 
         stage = new Stage(new StretchViewport(800,480));
         buttonAtlas = new TextureAtlas(Gdx.files.internal("button.atlas"));
