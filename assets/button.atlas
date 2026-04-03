@@ -1,0 +1,27 @@
+
+button.png
+size: 512, 128
+format: RGBA8888
+filter: Linear, Linear
+repeat: none
+menu_button_down
+  rotate: false
+  xy: 192, 2
+  size: 188, 72
+  orig: 192, 76
+  offset: 2, 2
+  index: -1
+menu_button_up
+  rotate: false
+  xy: 2, 2
+  size: 188, 72
+  orig: 192, 76
+  offset: 2, 2
+  index: -1
+turn_left
+  rotate: false
+  xy: 382, 10
+  size: 73, 64
+  orig: 128, 128
+  offset: 23, 30
+  index: -1
