@@ -4,10 +4,9 @@ import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.scenes.scene2d.Stage;
 import com.badlogic.gdx.utils.ScreenUtils;
-import com.badlogic.gdx.utils.viewport.FitViewport;
-import com.badlogic.gdx.utils.viewport.ScreenViewport;
 import com.badlogic.gdx.utils.viewport.StretchViewport;
 
 public class ScreenManagerTest extends Game {
@@ -16,6 +15,7 @@ public class ScreenManagerTest extends Game {
     public OrthographicCamera camera;
     public StretchViewport viewport;
     public Stage stage;
+    public TextureAtlas buttonAtlas;
 
     @Override
     public void create ()
@@ -24,6 +24,7 @@ public class ScreenManagerTest extends Game {
         camera = new OrthographicCamera(Constants.WORLD_WIDTH, Constants.WORLD_HEIGHT);
         viewport = new StretchViewport(Constants.WORLD_WIDTH, Constants.WORLD_HEIGHT, camera);
         stage = new Stage(new StretchViewport(Constants.WORLD_WIDTH, Constants.WORLD_HEIGHT, camera));
+        buttonAtlas = new TextureAtlas(Gdx.files.internal("button.atlas"));
 
         Gdx.input.setInputProcessor(stage);
 
@@ -45,5 +46,6 @@ public class ScreenManagerTest extends Game {
     public void dispose() {
         batch.dispose();
         stage.dispose();
+        buttonAtlas.dispose();
     }
 }
