@@ -22,8 +22,8 @@ public class ScreenThree implements Screen {
     private SpriteBatch batch;
     private OrthographicCamera camera;
     private StretchViewport viewport;
+    private TextureAtlas buttonAtlas;
     static Skin skin;
-    static TextureAtlas buttonAtlas;
     static Button backButton;
     static Label label;
 
@@ -36,8 +36,8 @@ public class ScreenThree implements Screen {
 
         batch = game.batch;
         this.camera = game.camera;
+        this.buttonAtlas = game.buttonAtlas;
 
-        buttonAtlas = new TextureAtlas(Gdx.files.internal("button.atlas"));
         skin = new Skin();
         skin.addRegions(buttonAtlas);
 
@@ -106,6 +106,6 @@ public class ScreenThree implements Screen {
 
     @Override
     public void dispose() {
-        buttonAtlas.dispose();
+
     }
 }
