@@ -19,9 +19,9 @@ public class MainScreen implements Screen {
     private SpriteBatch batch;
     private Stage stage;
     private OrthographicCamera camera;
+    private TextureAtlas buttonAtlas;
 
     static Skin skin;
-    static TextureAtlas buttonAtlas;
 
     TextButton.TextButtonStyle style;
     TextButton ScreenOneButton, ScreenTwoButton, ScreenThreeButton;
@@ -32,8 +32,8 @@ public class MainScreen implements Screen {
         this.stage = game.stage;
         this.batch = game.batch;
         this.camera = game.camera;
+        this.buttonAtlas = game.buttonAtlas;
 
-        buttonAtlas = new TextureAtlas(Gdx.files.internal("button.atlas"));
         BitmapFont font = new BitmapFont(Gdx.files.internal("lsans-32.fnt"));
         skin = new Skin();
         skin.addRegions(buttonAtlas);
